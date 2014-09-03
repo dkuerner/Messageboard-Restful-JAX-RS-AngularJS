@@ -13,16 +13,7 @@ angular.module('messageBoard').config(function($stateProvider,$httpProvider){
        url:'/messages/:id',
        templateUrl:'views/message-view.html',
        controller:'MessageViewController'
-    });/*
-    .state('newMovie',{
-        url:'/movies/new',
-        templateUrl:'partials/movie-add.html',
-        controller:'MovieCreateController'
-    }).state('editMovie',{
-        url:'/movies/:id/edit',
-        templateUrl:'partials/movie-edit.html',
-        controller:'MovieEditController'
-    });*/
+    });
 }).run(function($state){
    $state.go('messages');
 });
