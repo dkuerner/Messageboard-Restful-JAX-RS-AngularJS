@@ -5,15 +5,15 @@
 angular.module('messageBoard',['ui.router','ngResource','messageBoard.controllers','messageBoard.services']);
 
 angular.module('messageBoard').config(function($stateProvider,$httpProvider){
-    $stateProvider.state('messages',{
+    $stateProvider.state('MessageList',{
         url:'/messages',
-        templateUrl:'views/messages.html',
+        templateUrl:'views/MessageList.html',
         controller:'MessageListController'
-    }).state('viewMessage',{
+    }).state('MessageDetail',{
        url:'/messages/:id',
-       templateUrl:'views/message-view.html',
-       controller:'MessageViewController'
+       templateUrl:'views/MessageDetail.html',
+       controller:'MessageDetailController'
     });
 }).run(function($state){
-   $state.go('messages');
+   $state.go('MessageList');
 });
