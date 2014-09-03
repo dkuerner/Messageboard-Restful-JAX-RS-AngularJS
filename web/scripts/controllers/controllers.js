@@ -3,7 +3,7 @@
  */
 angular.module('messageBoard.controllers',[])
         
-        .controller('MessageListController',function($scope,$state,$window,Message){
+        .controller('MessageListController',function($scope,Message,$stateParams){
             $scope.msgOrder = "uniqueId";
             $scope.messages = Message.query();
 
@@ -24,7 +24,7 @@ angular.module('messageBoard.controllers',[])
 
         })
         
-        .controller('MessageDetailController',function($scope,$state,$stateParams,Message){
+        .controller('MessageDetailController',function($scope,Message,$stateParams){
 
             $scope.message=Message.get({id:$stateParams.id});
 
