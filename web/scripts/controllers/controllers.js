@@ -5,7 +5,7 @@ angular.module('messageBoard.controllers',[])
         
         .controller('MessageListController',function($scope,Message,$stateParams){
             $scope.msgOrder = "uniqueId";
-            $scope.messages = Message.query();
+            $scope.messages = Message.query(); // override of default GET to wrap returned objects to an array
 
             $scope.newMessage = new Message();
 
